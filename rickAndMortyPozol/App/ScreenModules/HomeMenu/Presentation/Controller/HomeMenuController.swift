@@ -40,7 +40,7 @@ class HomeMenuController: UICollectionViewController {
                 self.collectionView.reloadData() //Cuando el viewModel termine d cargar, recargara la data
             case .loading:
                 print("loading")
-            case .fail(error: let error):
+            case .fail(error: _):
                 print("error")
             }
         }.store(in: &cancellable)
