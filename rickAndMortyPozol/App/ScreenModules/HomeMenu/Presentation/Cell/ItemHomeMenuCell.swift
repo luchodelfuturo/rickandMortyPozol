@@ -17,14 +17,14 @@ final class ItemHomeMenuCell: UICollectionViewCell {
     private let mainContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGroupedBackground
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = ViewValues.defaultCornerRadius
         view.layer.masksToBounds = true // esto recorta la imagen para q se agrege el rounded
         return view
     }()
     
     private let categoryMenuImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "default")
+        imageView.image = UIImage(named: Images.defaultImage)
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -32,7 +32,6 @@ final class ItemHomeMenuCell: UICollectionViewCell {
     private let titleCategoryLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "Category"
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         return label
     }()
@@ -52,7 +51,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
     
     private func configUI(){
         addSubview(mainContainer)
-        mainContainer.fillSuperView(widthPadding: 10)
+        mainContainer.fillSuperView(widthPadding: ViewValues.normalPadding)
         
         mainContainer.addSubview(categoryMenuImageView)
         categoryMenuImageView.fillSuperView()
@@ -60,7 +59,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         configGradientForTitle() // lo llamamos acá para que pueda estar destras del titulo
         
         mainContainer.addSubview(titleCategoryLabel)
-        titleCategoryLabel.setConstraint( right: mainContainer.trailingAnchor, bottom: mainContainer.bottomAnchor, left: mainContainer.leadingAnchor, pRight: 10, pBottom: 10, pLeft: 10)
+        titleCategoryLabel.setConstraint( right: mainContainer.trailingAnchor, bottom: mainContainer.bottomAnchor, left: mainContainer.leadingAnchor, pRight: ViewValues.normalPadding, pBottom: ViewValues.normalPadding, pLeft: ViewValues.normalPadding)
         
     }
     
@@ -68,7 +67,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         let gradientMaskLayer = CAGradientLayer()
         gradientMaskLayer.frame = self.bounds //que ocupe todo el recuadro
         gradientMaskLayer.colors = [UIColor.clear.cgColor, UIColor.darkGray.cgColor] //los dos colores a usar
-        gradientMaskLayer.locations = [0.6,0.9] //Seteamos la ubicacion desde donde a donde
+        gradientMaskLayer.locations = [ViewValues.gradientTitleInit,ViewValues.gradientTitleEnd] //Seteamos la ubicacion desde donde a donde
         mainContainer.layer.addSublayer(gradientMaskLayer)
     }
     // MARK: - Actions
