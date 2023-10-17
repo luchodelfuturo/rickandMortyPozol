@@ -34,16 +34,17 @@ class HomeMenuController: UICollectionViewController {
         viewModel
             .state
             .receive(on: RunLoop.main) // Esto nos permite recibir el estado del controlador del viewmodel, en el hilo principal.
-            .sink { state in
-            switch state {
-            case .success:
-                self.collectionView.reloadData() //Cuando el viewModel termine d cargar, recargara la data
-            case .loading:
-                print("loading")
-            case .fail(error: _):
-                print("error")
-            }
-        }.store(in: &cancellable)
+            .sink { [weak self ] state in
+                self?.hideSpinner()
+                switch state {
+                case .success:
+                    self?.collectionView.reloadData() //Cuando el viewModel termine d cargar, recargara la data
+                case .loading:
+                    self?.showSpinner()
+                case .fail(error: let error):
+                    self?.presentAlert(message: error, title: "Error")
+                }
+            }.store(in: &cancellable)
     }
     
     private func configUI(){
@@ -53,8 +54,8 @@ class HomeMenuController: UICollectionViewController {
     private func configCollectionView() {
         collectionView.register(ItemHomeMenuCell.self, forCellWithReuseIdentifier: ItemHomeMenuCell.reuseIdentifier)
     }
-
-
+    
+    
 }
 
 extension HomeMenuController {
@@ -73,4 +74,14 @@ extension HomeMenuController {
         viewModel.menuItemsCount
         
     }
+}
+
+extension HomeMenuController: SpinnerDisplayable{
+    func showSpiner() {
+//
+    }
+}
+
+extension HomeMenuController: MessageDisplayable {
+    
 }
