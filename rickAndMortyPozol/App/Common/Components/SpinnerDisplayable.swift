@@ -10,7 +10,6 @@ import UIKit
 
 protocol SpinnerDisplayable: AnyObject {
     func showSpinner()
-    func showSpiner()
 }
 
 extension SpinnerDisplayable where Self : UIViewController {

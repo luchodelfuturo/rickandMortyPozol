@@ -16,9 +16,29 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let controller = homeFactory.makeModule()
+        let controller = homeFactory.makeModule(coordinator: self)
         navigation.pushViewController(controller, animated: true)
     }
+
+}
+
+extension HomeCoordinator: HomeMenuViewControllerCoordinator {
+    func didSelectMenuCell(model: MenuItem) {
+        switch model.type {
+        case .characters: goToCharacters()
+        case .episodes: goToEpisodes()
+        case .locations: goToLocations()
+        
+        }
+    }
     
-    
+    private func goToCharacters(){
+        print("screen Characters")
+    }
+    private func goToEpisodes(){
+        print("screen Episodes")
+    }
+    private func goToLocations(){
+        print("screen Locations")
+    }
 }
