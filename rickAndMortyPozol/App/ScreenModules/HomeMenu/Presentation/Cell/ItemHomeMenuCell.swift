@@ -55,7 +55,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         
         mainContainer.addSubview(categoryMenuImageView)
         categoryMenuImageView.fillSuperView()
-        
+       
         configGradientForTitle() // lo llamamos acá para que pueda estar destras del titulo
         
         mainContainer.addSubview(titleCategoryLabel)

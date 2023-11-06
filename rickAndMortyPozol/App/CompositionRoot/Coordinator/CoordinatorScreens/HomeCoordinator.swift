@@ -25,15 +25,17 @@ final class HomeCoordinator: Coordinator {
 extension HomeCoordinator: HomeMenuViewControllerCoordinator {
     func didSelectMenuCell(model: MenuItem) {
         switch model.type {
-        case .characters: goToCharacters()
+        case .characters: goToCharacters(urlList: model.url)
         case .episodes: goToEpisodes()
         case .locations: goToLocations()
         
         }
     }
     
-    private func goToCharacters(){
-        print("screen Characters")
+    private func goToCharacters(urlList: String){
+        let coordinator = homeFactory.makeCoordinatorCharacters(navigation: navigation, urlList: urlList)
+        
+        coordinator.start()
     }
     private func goToEpisodes(){
         print("screen Episodes")

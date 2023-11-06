@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1052562AE856AD00007F97 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1052552AE856AD00007F97 /* CharactersViewController.swift */; };
 		4D2C994D2ADF199800DED976 /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C994C2ADF199800DED976 /* SpinnerDisplayable.swift */; };
 		4D2C99502ADF1AF400DED976 /* ViewValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C994F2ADF1AF300DED976 /* ViewValues.swift */; };
 		4D2C99522ADF1F9A00DED976 /* MessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C99512ADF1F9A00DED976 /* MessageDisplayable.swift */; };
@@ -20,6 +21,8 @@
 		4D5DBDBF2AD5F587005B5C80 /* MenuDTO+Mappear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5DBDBE2AD5F587005B5C80 /* MenuDTO+Mappear.swift */; };
 		4D5DBDC12AD5F5FF005B5C80 /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5DBDC02AD5F5FF005B5C80 /* PropertyIterator.swift */; };
 		4D5DBDC32AD5F78F005B5C80 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5DBDC22AD5F78F005B5C80 /* Endpoint.swift */; };
+		4D60FC832AE2E65800C6B440 /* CharactersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60FC822AE2E65800C6B440 /* CharactersFactory.swift */; };
+		4D64D3292AF9615C009E9D48 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64D3282AF9615C009E9D48 /* CharactersCoordinator.swift */; };
 		4D6665222AC47A4A003BF6B0 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6665212AC47A4A003BF6B0 /* UIView+Constraint.swift */; };
 		4D6665242AC47CC1003BF6B0 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6665232AC47CC1003BF6B0 /* Reusable.swift */; };
 		4D66652A2AC4AB11003BF6B0 /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6665292AC4AB11003BF6B0 /* MenuRepository.swift */; };
@@ -61,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1052552AE856AD00007F97 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		4D2C994C2ADF199800DED976 /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
 		4D2C994F2ADF1AF300DED976 /* ViewValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewValues.swift; sourceTree = "<group>"; };
 		4D2C99512ADF1F9A00DED976 /* MessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayable.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		4D5DBDBE2AD5F587005B5C80 /* MenuDTO+Mappear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuDTO+Mappear.swift"; sourceTree = "<group>"; };
 		4D5DBDC02AD5F5FF005B5C80 /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
 		4D5DBDC22AD5F78F005B5C80 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4D60FC822AE2E65800C6B440 /* CharactersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFactory.swift; sourceTree = "<group>"; };
+		4D64D3282AF9615C009E9D48 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
 		4D6665212AC47A4A003BF6B0 /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
 		4D6665232AC47CC1003BF6B0 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		4D6665292AC4AB11003BF6B0 /* MenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepository.swift; sourceTree = "<group>"; };
@@ -173,6 +179,14 @@
 				4D5DBDBE2AD5F587005B5C80 /* MenuDTO+Mappear.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		4D60FC842AE2E76A00C6B440 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4D1052552AE856AD00007F97 /* CharactersViewController.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		4D6665252AC4AADA003BF6B0 /* Domain */ = {
@@ -391,6 +405,7 @@
 		4DC4CBC12AB8DB8700D195D3 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				4D60FC842AE2E76A00C6B440 /* Presentation */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -533,6 +548,7 @@
 			isa = PBXGroup;
 			children = (
 				4D7CACEF2ABE08800011CF4E /* HomeCoordinator.swift */,
+				4D64D3282AF9615C009E9D48 /* CharactersCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -542,6 +558,7 @@
 			children = (
 				4D989D112ABB7F4F0078C826 /* AppFactory.swift */,
 				4D7CACF12ABE08C70011CF4E /* HomeFactory.swift */,
+				4D60FC822AE2E65800C6B440 /* CharactersFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -706,10 +723,12 @@
 				4D989D0D2ABB7E630078C826 /* Coordinator.swift in Sources */,
 				4D5DBDB42AD5EDCE005B5C80 /* ApiClientServiceImp.swift in Sources */,
 				4DC4CB8E2AB8D58800D195D3 /* HomeMenuController.swift in Sources */,
+				4D64D3292AF9615C009E9D48 /* CharactersCoordinator.swift in Sources */,
 				4D66652A2AC4AB11003BF6B0 /* MenuRepository.swift in Sources */,
 				4D989D102ABB7ED40078C826 /* AppCoordinator.swift in Sources */,
 				4DBD4A8C2AC5C92D0088EC38 /* StateController.swift in Sources */,
 				4D2C994D2ADF199800DED976 /* SpinnerDisplayable.swift in Sources */,
+				4D60FC832AE2E65800C6B440 /* CharactersFactory.swift in Sources */,
 				4D66652D2AC4AB83003BF6B0 /* MenuItem.swift in Sources */,
 				4DC4CB8A2AB8D58800D195D3 /* AppDelegate.swift in Sources */,
 				4D7CACF22ABE08C70011CF4E /* HomeFactory.swift in Sources */,
@@ -731,6 +750,7 @@
 				4D5DBDB12AD5ED73005B5C80 /* ApiClientService.swift in Sources */,
 				4D5DBDBD2AD5F4EC005B5C80 /* MenuDTO.swift in Sources */,
 				4D2C99522ADF1F9A00DED976 /* MessageDisplayable.swift in Sources */,
+				4D1052562AE856AD00007F97 /* CharactersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
